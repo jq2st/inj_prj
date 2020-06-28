@@ -1,0 +1,38 @@
+header {
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.header {
+    height: 80px;
+    background-color: #6093BF;
+    color: white;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-info {
+    display: flex;
+    margin: 0 -20px;
+}
+.header-info__item {
+    margin: 0 20px;
+}
+.sub-header {
+
+}
+.sub-header-container__menu {
+    padding: 10px 0;
+}
+.sub-header-container__menu ul {
+    margin: 0 -20px;
+    display: flex;
+    list-style: none;
+}
+.sub-header-container__menu ul li {
+    margin: 0 20px;
+}
+.sub-header-container__menu ul li a {
+    color: black;
+    text-decoration: none;
+}
