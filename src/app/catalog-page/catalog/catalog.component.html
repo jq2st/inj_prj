@@ -1,1 +1,6 @@
-<p>catalog works!</p>
+<div class="catalog-items">
+    <app-catalog-item
+    *ngFor="let item of items"
+    [item]="item">
+    </app-catalog-item>
+</div>
