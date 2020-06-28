@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Item } from 'src/app/catalog-page/catalog/catalog.component';
 
 @Component({
   selector: 'app-catalog-item',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CatalogItemComponent implements OnInit {
 
-  @Input('item') item: string
+  @Input('item') item: Item;
 
   constructor() { }
 
