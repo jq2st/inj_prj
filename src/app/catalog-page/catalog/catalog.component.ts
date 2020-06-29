@@ -14,14 +14,16 @@ export interface Item {
 
 export class CatalogComponent implements OnInit {
 
+  sortBy: string = 's_alfa'
+
   items: Item[] = [
-    {picUrl: "", name: "Бисер 1", cost: 40000},
+    {picUrl: "", name: "Бисер 1", cost: 4000},
     {picUrl: "", name: "Бисер 2", cost: 6000},
     {picUrl: "", name: "Бисер 1", cost: 400},
-    {picUrl: "", name: "Бисер 2", cost: 60000},
+    {picUrl: "", name: "Бисер 2", cost: 6000},
     {picUrl: "", name: "Бисер 1", cost: 400},
     {picUrl: "", name: "Бисер 2", cost: 600},
-    {picUrl: "", name: "Бисер 1", cost: 400},
+    {picUrl: "", name: "Висер 1", cost: 400},
     {picUrl: "", name: "Бисер 2", cost: 600},
     {picUrl: "", name: "Бисер 1", cost: 400},
     {picUrl: "", name: "Бисер 2", cost: 600},
@@ -32,6 +34,10 @@ export class CatalogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sortCatalog(event) {
+    this.sortBy = event
   }
 
 }

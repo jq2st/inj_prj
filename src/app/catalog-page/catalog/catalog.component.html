@@ -1,6 +1,7 @@
+<app-sort (onSort)="sortCatalog($event)"></app-sort>
 <div class="catalog-items">
     <app-catalog-item
-    *ngFor="let item of items"
+    *ngFor="let item of items|sortFilter:sortBy"
     [item]="item">
     </app-catalog-item>
 </div>

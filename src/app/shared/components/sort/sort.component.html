@@ -1,0 +1,10 @@
+<div class="catalog-sort">
+    <div class="sortby">
+        Сортировать по 
+        <select class="sortby__select" [(ngModel)]="sortBy" (change)="sortCatalog()">
+            <option value="s_alfa">алфавиту</option>
+            <option value="s_costdown">убыванию цены</option>
+            <option value="s_costup">возрастанию цены</option>
+        </select>
+    </div>
+</div>
