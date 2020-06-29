@@ -2,6 +2,7 @@
 <div class="catalog-items">
     <app-catalog-item
     *ngFor="let item of items|sortFilter:sortBy"
-    [item]="item">
+    [item]="item"
+    (click)="goToItem(item)">
     </app-catalog-item>
 </div>

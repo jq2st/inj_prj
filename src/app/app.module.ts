@@ -13,6 +13,8 @@ import { SumPipe } from './pipes/sum.pipe';
 import { SortComponent } from './shared/components/sort/sort.component';
 import { FilterComponent } from './shared/components/filter/filter.component';
 import { SortFilterPipe } from './pipes/sort-filter.pipe';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { ItemPageComponent } from './item-page/item-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SortFilterPipe } from './pipes/sort-filter.pipe';
     SumPipe,
     SortComponent,
     FilterComponent,
-    SortFilterPipe
+    SortFilterPipe,
+    CartPageComponent,
+    ItemPageComponent
   ],
   imports: [
     BrowserModule,
