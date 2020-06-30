@@ -1,8 +1,13 @@
-<app-sort (onSort)="sortCatalog($event)"></app-sort>
-<div class="catalog-items">
-    <app-catalog-item
-    *ngFor="let item of items|sortFilter:sortBy"
-    [item]="item"
-    (click)="goToItem(item)">
-    </app-catalog-item>
+<div class="catalog" *ngIf="isLoaded else loaging">
+    <app-sort (onSort)="sortCatalog($event)"></app-sort>
+    <div class="catalog-items">
+        <app-catalog-item
+        *ngFor="let item of items|sortFilter:sortBy"
+        [item]="item"
+        (click)="goToItem(item)">
+        </app-catalog-item>
+    </div>
 </div>
+<ng-template #loading>
+    Загрузка
+</ng-template>

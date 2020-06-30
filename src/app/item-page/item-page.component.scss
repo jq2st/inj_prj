@@ -1,0 +1,60 @@
+.item-dev {
+    display: flex;
+}
+.item-dev__pic {
+    width: 600px;
+    height: 400px;
+    background-image: url("src/assets/imgs/item.png");
+    background-size: cover;
+}
+.item-dev__desc {
+    flex: 1;
+    margin-left: 20px;
+    min-height: 400px;
+}
+.buybutton {
+    margin-top: 30px;
+    border: 2px solid  #6093BF;
+    border-radius: 20px;
+    color: #6093BF;
+    padding: 5px 0;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+}
+.buybutton:hover {
+    color: white;
+    background-color: #6093BF;
+}
+.count {
+    margin-top: 20px;
+    display: flex;
+    user-select: none;
+    color: #6093BF;
+}
+.amount {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 20px;;
+    border: 2px solid #6093BF;
+}
+.amount__num {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+.amount__change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+}
+.price {
+    margin-top: 60px;
+    font-size: 30px;
+}

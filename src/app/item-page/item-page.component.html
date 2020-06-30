@@ -2,5 +2,21 @@
     {{itemName}}
 </div>
 <div class="item-container container">
-    sfs
+    <div class="item-dev">
+        <div class="item-dev__pic"></div>
+        <div class="item-dev__desc">
+            <p>{{itemDescription}}</p>
+            <div class="count">
+                <div class="amount">
+                    <div class="amount__change amount__decrease" (click)="amountDecrease()">-</div>
+                    <div class="amount__num">{{itemAmount}}</div>
+                    <div class="amount__change amount__increase" (click)="amountIncrease()">+</div>
+                </div>
+            </div>
+            <p class="price">{{(itemAmount*itemPrice)|sum}}</p>
+            <div class="buy">
+                <div class="buybutton" (click)="addToCart()">В корзину</div>
+            </div>
+        </div>
+    </div>
 </div>

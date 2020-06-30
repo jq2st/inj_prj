@@ -30,6 +30,7 @@
                     <div class="cart__pic"></div>
                     <div class="cart__sign">Корзина</div>
                 </a>
+                <div class="cartMainNum" *ngIf="cartService.cartMainNum > 0">{{cartService.cartMainNum}}</div>
             </div>
         </div>
     </div>

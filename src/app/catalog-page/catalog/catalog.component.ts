@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CatalogService } from 'src/app/services/catalog.service';
 
 export interface Item {
-  id?: number,
-  picUrl: string,
+  id: number,
+  picUrl?: string,
   name: string,
+  articul: string,
+  description: string,
   cost: number    
 } 
 
@@ -17,25 +20,17 @@ export interface Item {
 export class CatalogComponent implements OnInit {
 
   sortBy: string = 's_alfa'
-
-  items: Item[] = [
-    {id: 0, picUrl: "", name: "Бисер 1", cost: 4000},
-    {id: 1, picUrl: "", name: "Бисер 2", cost: 6000},
-    {id: 2, picUrl: "", name: "Бисер 1", cost: 400},
-    {id: 3, picUrl: "", name: "Бисер 2", cost: 6000},
-    {id: 4, picUrl: "", name: "Бисер 1", cost: 400},
-    {id: 5, picUrl: "", name: "Бисер 2", cost: 600},
-    {id: 6, picUrl: "", name: "Висер 1", cost: 400},
-    {id: 7, picUrl: "", name: "Бисер 2", cost: 600},
-    {id: 8, picUrl: "", name: "Бисер 1", cost: 400},
-    {id: 9, picUrl: "", name: "Бисер 2", cost: 600},
-    {id: 10, picUrl: "", name: "Бисер 1", cost: 400},
-    {id: 11, picUrl: "", name: "Бисер 2", cost: 600}
-  ]
+  items: Item[]
+  isLoaded = false
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private catalogService: CatalogService) { }
 
   ngOnInit() {
+    this.catalogService.getItems()
+      .subscribe(items => {
+        this.items = items
+        this.isLoaded = true
+      })
   }
 
   sortCatalog(event) {
