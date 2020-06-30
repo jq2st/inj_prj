@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-cart-page',
@@ -25,17 +25,40 @@ export class CartPageComponent implements OnInit {
         phone: new FormControl('', [Validators.required])
       }),
       adress: new FormGroup({
-        city: new FormControl('', Validators.required),
-        street: new FormControl(''),
-        house: new FormControl(''),
-        appartments: new FormControl('')
+        city: new FormControl('-', Validators.required),
+        street: new FormControl('-', Validators.required),
+        house: new FormControl('-', Validators.required),
+        appartments: new FormControl('-', Validators.required)
+      }),
+      account: new FormGroup({
+        email: new FormControl('gefault@mail.ru', [Validators.required, Validators.email]),
       }),
       getType: new FormControl('byself')
     })
   }
 
+  createAccount() {
+    this.isCreateAccount = !this.isCreateAccount
+    if (this.isCreateAccount) {
+      this.form.patchValue({account: {email: ''}})
+    }
+    else {
+      this.form.patchValue({account: {email: 'gefault@mail.ru'}})
+    }
+  }
+
+  changeGetType(event) {
+    if (event.target.value == 'delivery') {
+      this.form.patchValue({adress: {city: '', street: '', house: '', appartments: ''}})
+    }
+    else {
+      this.form.patchValue({adress: {city: '-', street: '-', house: '-', appartments: '-'}})
+    }
+  }
+
   submitPur() {
     console.log(this.form.value)
+    this.cartService.mainNumZeroing()
   }
 
 }

@@ -9,17 +9,21 @@
                     <p>Информация о заказчике</p>
                     <input type="text" placeholder="Имя" formControlName="name">
                     <input type="text" placeholder="Телефон" formControlName="phone">
+                    <p class="error" 
+                    *ngIf="form.get('userData').get('name').invalid && form.get('userData').get('name').touched || form.get('userData').get('phone').invalid && form.get('userData').get('phone').touched">
+                        *Эти поля должны быть заполнены
+                    </p>
                 </div>
             </div>
            <div class="form__part">
             <div class="form-group">
                 <p>Способ получения</p>
                 <div class="form-group__line">
-                    <input type="radio" id="get_type1" formControlName="getType" value="byself">
+                    <input type="radio" id="get_type1" formControlName="getType" value="byself" (change)="changeGetType($event)" >
                     <label for="get_type1">Самовывоз</label>
                 </div>
                 <div class="form-group__line">
-                    <input type="radio" id="get_type2" formControlName="getType" value="delivery">
+                    <input type="radio" id="get_type2" formControlName="getType" value="delivery" (change)="changeGetType($event)">
                     <label for="get_type2">Доставка</label>
                 </div>
             </div>
@@ -36,13 +40,12 @@
             <div class="form__part">
                 <div class="form-group">
                     <div class="form-group__line">
-                        <input type="checkbox" id="or_create_account" (change)="isCreateAccount = !isCreateAccount">
+                        <input type="checkbox" id="or_create_account" (change)="createAccount()">
                         <label for="or_create_account">Создать аккаунт</label>
                     </div>
                     <p>Создайте аккант, чтобы отслеживать заказы.</p>
-                    <div class="form-group__newaccount" *ngIf="isCreateAccount">
-                        <input type="text" placeholder="E-mail">
-                        <input type="text" placeholder="Пароль">
+                    <div class="form-group__newaccount" *ngIf="isCreateAccount" formGroupName="account">
+                        <input type="text" placeholder="E-mail" formControlName="email">
                     </div>
                 </div>
             </div>
