@@ -9,14 +9,24 @@ export class CartService {
 
   constructor() { }
 
-  addItem(amount) {
+  addItem(amount, itemId) {
     this.cartMainNum += amount
     localStorage.setItem("cartMainNum", "" + this.cartMainNum)
-    console.log('Pizd', this.cartMainNum)
+    if (localStorage.getItem("cartItemIds").length > 0) {
+      let itemIdsArray = []
+      localStorage.getItem("cartItemIds").split('___').forEach(i => {
+        console.log(i.split('__'))
+        itemIdsArray.push(i.split('__'))
+      })
+
+      let newV = localStorage.getItem("cartItemIds") + '___'
+      console.log(itemIdsArray)
+      // let totalAmount = 
+      localStorage.setItem("cartItemIds", "" + itemId + "__" + amount)
+    }
   }
 
   getStorageCartNum() {
-    console.log('Piz', this.cartMainNum)
     if (localStorage.getItem("cartMainNum")) {
       this.cartMainNum = Number.parseInt(localStorage.getItem("cartMainNum"))
     }

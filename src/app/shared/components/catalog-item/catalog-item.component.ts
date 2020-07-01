@@ -17,7 +17,6 @@ export class CatalogItemComponent implements OnInit {
   }
 
   goToItem(item) {
-    console.log(item)
     this.router.navigate(['/item', item.id])
   }
 

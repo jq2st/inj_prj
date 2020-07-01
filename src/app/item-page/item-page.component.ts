@@ -33,7 +33,7 @@ export class ItemPageComponent implements OnInit {
 
   addToCart() {
     let amount = this.itemAmount
-    this.cartService.addItem(amount)
+    this.cartService.addItem(amount, this.item.id)
   }
 
   amountIncrease() {

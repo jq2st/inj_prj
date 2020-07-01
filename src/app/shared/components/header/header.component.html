@@ -59,3 +59,9 @@
         </div>
     </div>
 </header>
+<div class="mobile-sub-header-container__cart">
+    <a class="cart" routerLink="/cart">
+        <div class="cart__pic"></div>
+    </a>
+    <div class="cartMainNum" *ngIf="cartService.cartMainNum > 0">{{cartService.cartMainNum}}</div>
+</div>
