@@ -4,3 +4,15 @@
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+@media (max-width: 750px) {
+    .catalog-items {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-items {
+        grid-template-columns: 1fr;
+    }
+}

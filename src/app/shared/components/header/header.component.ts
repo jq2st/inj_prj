@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class HeaderComponent implements OnInit {
 
+  isMobileMenuOpen = false
 
   constructor(private cartService: CartService) { }
 

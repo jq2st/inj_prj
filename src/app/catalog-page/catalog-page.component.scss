@@ -1,3 +1,9 @@
 .catalog-page-container {
     display: flex;
 }
+
+@media (max-width: 750px) {
+    .catalog-page-container {
+        flex-direction: column;
+    }
+}

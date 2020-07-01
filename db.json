@@ -1,20 +1,22 @@
 {
   "items": [
-    { "id": 0, "name": "бисер 1", "articul": "976754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 600 },
-    { "id": 1, "name": "бисер 2", "articul": "770754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 500},
-    { "id": 2, "name": "бисер 3", "articul": "976754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 400 },
-    { "id": 3, "name": "бисер 4", "articul": "770754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 200 },
-    { "id": 4, "name": "бисер 5", "articul": "976754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 100 },
-    { "id": 5, "name": "бисер 6", "articul": "770754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 100 },
-    { "id": 6, "name": "бисер 7", "articul": "976754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 300 },
-    { "id": 7, "name": "бисер 8", "articul": "770754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 599 },
-    { "id": 8, "name": "бисер 9", "articul": "976754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 900 },
-    { "id": 9, "name": "бисер 10", "articul": "770754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 500 },
-    { "id": 10, "name": "бисер 11", "articul": "976754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 870 },
-    { "id": 11, "name": "бисер 12", "articul": "770754", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 200 }
+    { "id": 0, "name": "бисер 1", "articul": "976754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 600 },
+    { "id": 1, "name": "бисер 2", "articul": "770754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 500},
+    { "id": 2, "name": "бисер 3", "articul": "976754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 400 },
+    { "id": 3, "name": "бисер 4", "articul": "770754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 200 },
+    { "id": 4, "name": "бисер 5", "articul": "976754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 100 },
+    { "id": 5, "name": "бисер 6", "articul": "770754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 100 },
+    { "id": 6, "name": "нитки 1", "articul": "976754", "category": "1", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 300 },
+    { "id": 7, "name": "бисер 8", "articul": "770754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 599 },
+    { "id": 8, "name": "бисер 9", "articul": "976754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 900 },
+    { "id": 9, "name": "нитки 2", "articul": "770754", "category": "1", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 500 },
+    { "id": 10, "name": "наборы 1", "articul": "976754", "category": "2", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 870 },
+    { "id": 11, "name": "бисер 10", "articul": "770754", "category": "0", "description": "lorem dfghfg hrh gdg sreghd sdagfaerg saga", "cost": 200 }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
+  "categories": [
+      { "id": 0, "name": "Бисер" },
+      { "id": 1, "name": "Нитки" },
+      { "id": 2, "name": "Наборы" }
+    ],
   "profile": { "name": "typicode" }
 }

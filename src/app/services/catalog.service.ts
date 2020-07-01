@@ -19,4 +19,13 @@ export class CatalogService {
   getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.link + '/items')
   }
+
+  getItemsByCategory(category): Observable<Item[]> {
+    return this.http.get<Item[]>(this.link + '/items?category=' + category)
+  }
+
+  getCategories() {
+    return this.http.get(this.link + '/categories')
+  }
+
 }

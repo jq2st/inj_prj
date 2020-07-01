@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CatalogService } from 'src/app/services/catalog.service';
+import { switchMap, map } from 'rxjs/operators';
 
 export interface Item {
   id: number,
@@ -22,15 +23,26 @@ export class CatalogComponent implements OnInit {
   sortBy: string = 's_alfa'
   items: Item[]
   isLoaded = false
+  category = '0'
   
-  constructor(private router: Router, private catalogService: CatalogService) { }
+  constructor(private router: Router, private catalogService: CatalogService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.catalogService.getItems()
-      .subscribe(items => {
+    this.route.queryParams
+      .pipe(
+        switchMap((params: Params) => {
+          console.log(params.category)
+          if (!params.category) {
+            return this.catalogService.getItems()
+          }
+          else {
+            return this.catalogService.getItemsByCategory(params.category)
+          }
+        })
+      ).subscribe(items => {
         this.items = items
         this.isLoaded = true
-      })
+    })
   }
 
   sortCatalog(event) {

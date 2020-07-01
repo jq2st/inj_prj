@@ -1,18 +1,6 @@
 <div class="categories">
     <ul>
-        <li>Категория 1
-            <ul>
-                <li>Подкатегория 1</li>
-                <li class="categories__list_active">Подкатегория 2</li>
-                <li>Подкатегория 3</li>
-                <li>Подкатегория 4</li>
-            </ul>
-        </li>
-        <li>Категория 2</li>
-        <li>Категория 3</li>
-        <li>Категория 4</li>
-        <li>Категория 5</li>
-        <li>Категория 6</li>
+        <li *ngFor="let cat of categories"><a [routerLink]="['/']" [queryParams]="{category: cat.id}" routerLinkActive="categories__list_active">{{cat.name}}</a></li>
     </ul>
 </div>
-<app-filter></app-filter>
+<!-- <app-filter></app-filter> -->
