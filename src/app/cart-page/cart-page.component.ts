@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { CatalogService } from '../services/catalog.service';
+
+export interface inCartItem {
+  id?: any,
+  name: string,
+  amount: any,
+  price: number,
+  articul: string
+}
 
 @Component({
   selector: 'app-cart-page',
@@ -12,13 +21,29 @@ export class CartPageComponent implements OnInit {
   isEmpty: boolean = true
   form: FormGroup
   isCreateAccount = false
+  itemIds = []
+  items: inCartItem[] = [] 
+  totalPrice: number = 0
 
-  constructor(private cartService: CartService) { }
+
+  constructor(private cartService: CartService, private catalogService: CatalogService) { }
 
   ngOnInit() {
     if (this.cartService.cartMainNum > 0) {
       this.isEmpty = false
+      localStorage.getItem('cartItemIds').split('___').forEach(n => {
+        if (n != '') {
+          let itemId = n.split('__')[0]
+          let itemAmount = n.split('__')[1]
+          this.catalogService.getItem(Number.parseInt(itemId))
+            .subscribe(item => {
+              this.items.push({id: item.id, name: item.name, amount: itemAmount, price: item.cost, articul: item.articul})
+              this.totalPrice += item.cost * Number.parseInt(itemAmount)
+            })
+        }
+      })
     } 
+
     this.form = new FormGroup({
       userData: new FormGroup({
         name: new FormControl('', [Validators.required]),
@@ -35,6 +60,7 @@ export class CartPageComponent implements OnInit {
       }),
       getType: new FormControl('byself')
     })
+
   }
 
   createAccount() {

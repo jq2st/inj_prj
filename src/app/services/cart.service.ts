@@ -65,6 +65,7 @@ export class CartService {
   mainNumZeroing() {
     this.cartMainNum = 0
     localStorage.removeItem("cartMainNum")
+    localStorage.removeItem('cartItemIds')
   }
 
 }

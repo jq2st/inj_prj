@@ -55,3 +55,30 @@ input.ng-valid {
     margin-top: 20px;
     color: red;
 }
+.incartItem-line {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+}
+.incartItem__part {
+    flex: 1;
+}
+.line_b {
+    font-weight: bold;
+}
+.finalCost {
+    font-weight: bold;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+@media (max-width: 500px) {
+    .line_b {
+        font-size: 10px;;
+    }
+    .incartItem-line {
+        font-size: 12px;
+    }
+}

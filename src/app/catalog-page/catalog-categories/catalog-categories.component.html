@@ -1,6 +1,6 @@
 <div class="categories">
     <ul>
-        <li *ngFor="let cat of categories"><a [routerLink]="['/']" [queryParams]="{category: cat.id}" routerLinkActive="categories__list_active">{{cat.name}}</a></li>
+        <li *ngFor="let cat of categories"><a [routerLink]="['']" [queryParams]="{category: cat.id}" routerLinkActive="categories__list_active">{{cat.name}}</a></li>
     </ul>
 </div>
 <!-- <app-filter></app-filter> -->

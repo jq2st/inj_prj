@@ -5,6 +5,28 @@
     <div class="form-container" *ngIf="!isEmpty else emptycart">
         <form class="form" [formGroup]="form" (submit)="submitPur()">
             <div class="form__part">
+                <div class="form-group">
+                    <p>Список товаров</p>
+                    <div class="incartItem-line line_b">
+                        <div class="incartItem__part">Название</div>
+                        <div class="incartItem__part">Артикул</div>
+                        <div class="incartItem__part">Количество</div>
+                        <div class="incartItem__part">Стоимость</div>
+                    </div>
+                    <div class="incartItem" *ngFor="let item of items">
+                        <div class="incartItem-line">
+                            <div class="incartItem__part">{{item.name}}</div>
+                            <div class="incartItem__part">{{item.articul}}</div>
+                            <div class="incartItem__part">{{item.amount}}</div>
+                            <div class="incartItem__part">{{(item.price * item.amount)|sum}}</div>
+                        </div>
+                    </div>
+                    <div class="finalCost">
+                        {{'Итого: ' + totalPrice|sum}}
+                    </div>
+                </div>
+            </div>
+            <div class="form__part">
                 <div class="form-group" formGroupName="userData">
                     <p>Информация о заказчике</p>
                     <input type="text" placeholder="Имя" formControlName="name">
