@@ -16,6 +16,9 @@ import { FilterComponent } from './shared/components/filter/filter.component';
 import { SortFilterPipe } from './pipes/sort-filter.pipe';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { ItemPageComponent } from './item-page/item-page.component';
+import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
+import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
+import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ItemPageComponent } from './item-page/item-page.component';
     FilterComponent,
     SortFilterPipe,
     CartPageComponent,
-    ItemPageComponent
+    ItemPageComponent,
+    AdminLayoutComponent,
+    AdminLoginPageComponent,
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
