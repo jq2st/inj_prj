@@ -1,0 +1,11 @@
+.dev-dashboard {
+    display: flex;
+}
+app-dashboard-nav {
+    flex-shrink: 1;
+    width: 300px;
+}
+.link-content {
+    flex: 1;
+    margin: 30px 20px 20px 50px;
+}

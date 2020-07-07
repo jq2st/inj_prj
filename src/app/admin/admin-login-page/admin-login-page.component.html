@@ -1,14 +1,14 @@
 <div class="admin-login-container">
     <div class="login-form">
         <div class="form">
-            <form>
+            <form [formGroup]="form" (submit)="checkAdmin()">
                 <div class="form__part">
                     <label for="adminlogin">Логин</label>
-                    <input type="text">
+                    <input type="text" formControlName="login">
                 </div>
                 <div class="form__part">
                     <label for="adminpass">Пароль</label>
-                    <input type="password">
+                    <input type="password" formControlName="password">
                 </div>
                 <button type="submit" class="submit">Войти</button>
             </form>

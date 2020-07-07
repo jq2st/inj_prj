@@ -8,6 +8,8 @@ import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.componen
 import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
+import { AdminDashboardPadeComponent } from './admin/admin-dashboard-pade/admin-dashboard-pade.component';
+import { DashboardProductsComponent } from './admin/admin-dashboard-pade/dashboard-products/dashboard-products.component';
 
 
 const routes: Routes = [
@@ -21,7 +23,10 @@ const routes: Routes = [
   },
   {path: 'admin', component: AdminLayoutComponent, children: [
     {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
-    {path: 'login', component: AdminLoginPageComponent}
+    {path: 'login', component: AdminLoginPageComponent},
+    {path: 'dashboard', component: AdminDashboardPadeComponent, children: [
+      {path: 'products', component: DashboardProductsComponent}
+    ]}
   ]}
 ];
 

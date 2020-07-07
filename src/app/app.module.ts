@@ -19,6 +19,9 @@ import { ItemPageComponent } from './item-page/item-page.component';
 import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
 import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
+import { AdminDashboardPadeComponent } from './admin/admin-dashboard-pade/admin-dashboard-pade.component';
+import { DashboardProductsComponent } from './admin/admin-dashboard-pade/dashboard-products/dashboard-products.component';
+import { DashboardNavComponent } from './admin/admin-dashboard-pade/dashboard-nav/dashboard-nav.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { MainLayoutComponent } from './shared/components/main-layout/main-layout
     ItemPageComponent,
     AdminLayoutComponent,
     AdminLoginPageComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    AdminDashboardPadeComponent,
+    DashboardProductsComponent,
+    DashboardNavComponent
   ],
   imports: [
     BrowserModule,
