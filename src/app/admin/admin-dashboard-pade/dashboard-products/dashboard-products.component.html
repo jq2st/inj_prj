@@ -2,7 +2,7 @@
     <h1>Товары</h1>
     <div class="products-add">Добавить товар +</div>
     <div class="products-list">
-        <div class="products-list__item" *ngFor="let product of productsList">
+        <div class="products-list__item" *ngFor="let product of productsList" (click)="editProduct(product.id)">
             <div class="list-item">
                 <div class="list-item__item">{{product.name}}</div>
                 <div class="list-item__item">{{product.articul}}</div>
@@ -10,6 +10,8 @@
                 <div class="list-item__item">{{product.description}}</div>
                 <div class="list-item__item">{{product.cost}}</div>
             </div>
+            <div class="delete-item" (click)="deleteProduct(product.id)">Удалить</div>
         </div>
     </div>
 </div>
+<app-edit-product *ngIf="isEditing" (onEdit)="changeProduct($event)"></app-edit-product>

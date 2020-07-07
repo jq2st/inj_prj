@@ -1,0 +1,14 @@
+<div class="window-bg">
+    <div class="window">
+        <div class="edit-inside">
+            <form [formGroup]="editForm" (submit)="saveEdited(editingProduct.id)">
+                <input type="text" formControlName="name">
+                <input type="text" formControlName="articul">
+                <input type="text" formControlName="category">
+                <input type="text" formControlName="description">
+                <input type="text" formControlName="cost">
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+</div>

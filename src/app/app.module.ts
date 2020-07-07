@@ -22,6 +22,7 @@ import { MainLayoutComponent } from './shared/components/main-layout/main-layout
 import { AdminDashboardPadeComponent } from './admin/admin-dashboard-pade/admin-dashboard-pade.component';
 import { DashboardProductsComponent } from './admin/admin-dashboard-pade/dashboard-products/dashboard-products.component';
 import { DashboardNavComponent } from './admin/admin-dashboard-pade/dashboard-nav/dashboard-nav.component';
+import { EditProductComponent } from './shared/components/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DashboardNavComponent } from './admin/admin-dashboard-pade/dashboard-na
     MainLayoutComponent,
     AdminDashboardPadeComponent,
     DashboardProductsComponent,
-    DashboardNavComponent
+    DashboardNavComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,

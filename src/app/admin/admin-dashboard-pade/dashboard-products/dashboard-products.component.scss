@@ -17,6 +17,9 @@
         color: coral;
     }
 }
+.products-list__item {
+    display: flex;
+}
 .products-list {
     padding: 30px;
     border-radius: 5px;
@@ -37,3 +40,11 @@
         cursor: pointer;
     }
 }
+.delete-item {
+    padding: 5px 10px;
+    color: lightpink;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
+} 
