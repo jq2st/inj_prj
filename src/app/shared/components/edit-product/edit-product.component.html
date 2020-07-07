@@ -1,14 +1,18 @@
 <div class="window-bg">
     <div class="window">
         <div class="edit-inside">
+            <h2>Параметры товара</h2>
             <form [formGroup]="editForm" (submit)="saveEdited(editingProduct.id)">
                 <input type="text" formControlName="name">
                 <input type="text" formControlName="articul">
                 <input type="text" formControlName="category">
                 <input type="text" formControlName="description">
                 <input type="text" formControlName="cost">
-                <button type="submit">Сохранить</button>
+                <div class="button-block">
+                    <button type="submit">Сохранить</button>
+                </div>
             </form>
         </div>
+        <div class="close-button" (click)="closePopup()"></div>
     </div>
 </div>

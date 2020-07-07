@@ -18,6 +18,7 @@ export class EditProductComponent implements OnInit {
   editId: number 
 
   @Output() onEdit: EventEmitter<Item> = new EventEmitter<Item>()
+  @Output() onClose: EventEmitter<null> = new EventEmitter<null>()
 
   constructor(private catalogService: CatalogService, private route: ActivatedRoute) { }
 
@@ -41,9 +42,15 @@ export class EditProductComponent implements OnInit {
       })
   }
 
+  closePopup() {
+    this.onClose.emit(null)
+  }
+
   saveEdited(id) {
     let item: Item = this.editForm.value
+    item.id = id
     this.onEdit.emit(item)
+    this.closePopup()
   }
 
 }

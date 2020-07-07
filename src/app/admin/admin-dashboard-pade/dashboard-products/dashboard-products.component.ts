@@ -46,4 +46,17 @@ export class DashboardProductsComponent implements OnInit {
       })
   }
 
+  changeProduct(event) {
+    console.log(event)
+    this.catalogService.putItem(event.id, event)
+      .subscribe(n => {
+        let changed = this.productsList.find(i => i.id == n.id)
+        changed.articul = n.articul
+        changed.name = n.name
+        changed.category = n.category
+        changed.description = n.description
+        changed.cost = n.cost
+      })
+  }
+
 }

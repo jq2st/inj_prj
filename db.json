@@ -1,27 +1,27 @@
 {
   "items": [
     {
-      "id": 5,
       "name": "бисер 6",
       "articul": "770754",
       "category": "0",
       "description": "Описание товара",
-      "cost": 100
+      "cost": 100,
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "нитки 1",
-      "articul": "976754",
-      "category": "1",
-      "description": "Описание товара",
-      "cost": 300
-    },
-    {
-      "name": "наборы 1",
+      "name": "Название 2",
       "articul": "976754",
       "category": "2",
       "description": "Описание товара",
-      "cost": 870,
+      "cost": 300,
+      "id": 6
+    },
+    {
+      "name": "Бисер Японский 32",
+      "articul": "976F32004",
+      "category": "1",
+      "description": "Бисер японский",
+      "cost": "50",
       "id": 10
     }
   ],
