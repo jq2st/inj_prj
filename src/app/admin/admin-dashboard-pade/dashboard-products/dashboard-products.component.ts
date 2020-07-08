@@ -14,6 +14,7 @@ export class DashboardProductsComponent implements OnInit {
 
   productsList: Item[] = []
   isEditing: boolean = false
+  isAdding: boolean = false
   toEdit: number
 
   constructor(private catalogService: CatalogService, private router: Router, private route: ActivatedRoute) { }
@@ -57,6 +58,12 @@ export class DashboardProductsComponent implements OnInit {
         changed.description = n.description
         changed.cost = n.cost
       })
+  }
+
+  addProduct(item) {
+    console.log('XXX', item)
+    this.catalogService.addItem(item)
+      .subscribe(n => this.productsList.push(n))
   }
 
 }

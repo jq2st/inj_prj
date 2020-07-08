@@ -23,6 +23,9 @@ import { AdminDashboardPadeComponent } from './admin/admin-dashboard-pade/admin-
 import { DashboardProductsComponent } from './admin/admin-dashboard-pade/dashboard-products/dashboard-products.component';
 import { DashboardNavComponent } from './admin/admin-dashboard-pade/dashboard-nav/dashboard-nav.component';
 import { EditProductComponent } from './shared/components/edit-product/edit-product.component';
+import { AddProductComponent } from './shared/components/add-product/add-product.component';
+import { DashboardCategoriesComponent } from './admin/admin-dashboard-pade/dashboard-categories/dashboard-categories.component';
+import { DashboardOrdersComponent } from './admin/admin-dashboard-pade/dashboard-orders/dashboard-orders.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { EditProductComponent } from './shared/components/edit-product/edit-prod
     AdminDashboardPadeComponent,
     DashboardProductsComponent,
     DashboardNavComponent,
-    EditProductComponent
+    EditProductComponent,
+    AddProductComponent,
+    DashboardCategoriesComponent,
+    DashboardOrdersComponent
   ],
   imports: [
     BrowserModule,

@@ -32,6 +32,10 @@ export class CatalogService {
     return this.http.delete<void>(this.link + '/items/' + id)
   }
 
+  addItem(item: Item): Observable<Item> {
+    return this.http.post<Item>(this.link + '/items/', item)
+  }
+
   putItem(id: number, item: Item): Observable<Item> {
     return this.http.put<Item>(this.link + '/items/' + id, {
       name: item.name,

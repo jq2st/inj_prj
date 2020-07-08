@@ -1,28 +1,100 @@
 {
   "items": [
     {
-      "name": "бисер 6",
-      "articul": "770754",
+      "name": "Бисер Н32",
+      "articul": "770032",
       "category": "0",
       "description": "Описание товара",
       "cost": 100,
       "id": 5
     },
     {
-      "name": "Название 2",
-      "articul": "976754",
-      "category": "2",
+      "name": "Нитки С1",
+      "articul": "Н00001",
+      "category": "1",
       "description": "Описание товара",
-      "cost": 300,
+      "cost": "999",
       "id": 6
     },
     {
       "name": "Бисер Японский 32",
       "articul": "976F32004",
-      "category": "1",
+      "category": "0",
       "description": "Бисер японский",
-      "cost": "50",
+      "cost": "150",
       "id": 10
+    },
+    {
+      "name": "Бисер Китай 81",
+      "articul": "770081",
+      "category": "0",
+      "description": "Описание",
+      "cost": "120",
+      "id": 12
+    },
+    {
+      "name": "Бисер Китай 84",
+      "articul": "770084",
+      "category": "0",
+      "description": "Описание товара",
+      "cost": "150",
+      "id": 13
+    },
+    {
+      "name": "Бисер Китай 85",
+      "articul": "770085",
+      "category": "0",
+      "description": "Описание товара",
+      "cost": "190",
+      "id": 14
+    },
+    {
+      "name": "Бисер Японский 33",
+      "articul": "976F32033",
+      "category": "0",
+      "description": "Бисер японский",
+      "cost": "190",
+      "id": 15
+    },
+    {
+      "name": "Бисер Швеция 5мм",
+      "articul": "55SH005",
+      "category": "0",
+      "description": "Описание",
+      "cost": "390",
+      "id": 16
+    },
+    {
+      "name": "Бисер Швеция 5.56",
+      "articul": "55SH0556",
+      "category": "0",
+      "description": "Описание",
+      "cost": "59",
+      "id": 17
+    },
+    {
+      "name": "Нитки С2",
+      "articul": "Н00002",
+      "category": "1",
+      "description": "Описание товара",
+      "cost": "780",
+      "id": 18
+    },
+    {
+      "name": "Нитки С3",
+      "articul": "Н00003",
+      "category": "1",
+      "description": "Описание товара",
+      "cost": "800",
+      "id": 19
+    },
+    {
+      "name": "Нитки С4",
+      "articul": "Н00004",
+      "category": "1",
+      "description": "Описание товара",
+      "cost": "899",
+      "id": 20
     }
   ],
   "categories": [

@@ -1,7 +1,7 @@
-.dashboard-products-container h1 {
+.dashboard-categories-container h1 {
     margin-bottom: 50px;
 }
-.products-add {
+.category-add {
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,11 +17,11 @@
         color: coral;
     }
 }
-.products-list__item {
+.categories-list__item {
     display: flex;
     border-bottom: 1px solid grey;
 }
-.products-list {
+.categories-list {
     padding: 30px;
     border-radius: 5px;
     border: 1px solid grey;

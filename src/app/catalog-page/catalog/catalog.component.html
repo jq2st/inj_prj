@@ -1,12 +1,17 @@
-<div class="catalog" *ngIf="isLoaded else loaging">
-    <app-sort (onSort)="sortCatalog($event)"></app-sort>
-    <div class="catalog-items">
-        <app-catalog-item
-        *ngFor="let item of items|sortFilter:sortBy"
-        [item]="item">
-        </app-catalog-item>
+<div class="catalog" *ngIf="isLoaded else loading">
+    <div class="cat-asc" *ngIf="(items.length > 0) else noitems">
+        <app-sort (onSort)="sortCatalog($event)"></app-sort>
+        <div class="catalog-items">
+            <app-catalog-item
+            *ngFor="let item of items|sortFilter:sortBy"
+            [item]="item">
+            </app-catalog-item>
+        </div>
     </div>
 </div>
 <ng-template #loading>
     Загрузка
+</ng-template>
+<ng-template #noitems>
+    <p style="padding: 10px; font-size: 20px;">Сейчас товары в данном разделе отсутствуют.</p>
 </ng-template>

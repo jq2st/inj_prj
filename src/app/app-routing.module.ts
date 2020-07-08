@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { AdminDashboardPadeComponent } from './admin/admin-dashboard-pade/admin-dashboard-pade.component';
 import { DashboardProductsComponent } from './admin/admin-dashboard-pade/dashboard-products/dashboard-products.component';
+import { DashboardCategoriesComponent } from './admin/admin-dashboard-pade/dashboard-categories/dashboard-categories.component';
+import { DashboardOrdersComponent } from './admin/admin-dashboard-pade/dashboard-orders/dashboard-orders.component';
 
 
 const routes: Routes = [
@@ -25,7 +27,9 @@ const routes: Routes = [
     {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
     {path: 'login', component: AdminLoginPageComponent},
     {path: 'dashboard', component: AdminDashboardPadeComponent, children: [
-      {path: 'products', component: DashboardProductsComponent}
+      {path: 'categories', component: DashboardCategoriesComponent},
+      {path: 'products', component: DashboardProductsComponent},
+      {path: 'orders', component: DashboardOrdersComponent}
     ]}
   ]}
 ];

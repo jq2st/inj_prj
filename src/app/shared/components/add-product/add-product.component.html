@@ -1,0 +1,18 @@
+<div class="window-bg">
+    <div class="window">
+        <div class="add-inside">
+            <h2>Параметры товара</h2>
+            <form [formGroup]="addForm" (submit)="saveAdded()">
+                <input type="text" placeholder="Название товара" formControlName="name">
+                <input type="text" placeholder="Артикул" formControlName="articul">
+                <input type="text" placeholder="Категория" formControlName="category">
+                <input type="text" placeholder="Описание" formControlName="description">
+                <input type="text" placeholder="Стоимость" formControlName="cost">
+                <div class="button-block">
+                    <button type="submit">Добавить</button>
+                </div>
+            </form>
+        </div>
+        <div class="close-button" (click)="closePopup()"></div>
+    </div>
+</div>
