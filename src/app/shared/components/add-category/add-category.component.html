@@ -1,0 +1,14 @@
+<div class="window-bg">
+    <div class="window">
+        <div class="add-inside">
+            <h2>Новая категория</h2>
+            <form [formGroup]="addCategory" (submit)="saveAdded()">
+                <input type="text" placeholder="Название категории" formControlName="name">
+                <div class="button-block">
+                    <button type="submit">Добавить</button>
+                </div>
+            </form>
+        </div>
+        <div class="close-button" (click)="closePopup()"></div>
+    </div>
+</div>

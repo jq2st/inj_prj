@@ -26,6 +26,7 @@ import { EditProductComponent } from './shared/components/edit-product/edit-prod
 import { AddProductComponent } from './shared/components/add-product/add-product.component';
 import { DashboardCategoriesComponent } from './admin/admin-dashboard-pade/dashboard-categories/dashboard-categories.component';
 import { DashboardOrdersComponent } from './admin/admin-dashboard-pade/dashboard-orders/dashboard-orders.component';
+import { AddCategoryComponent } from './shared/components/add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { DashboardOrdersComponent } from './admin/admin-dashboard-pade/dashboard
     EditProductComponent,
     AddProductComponent,
     DashboardCategoriesComponent,
-    DashboardOrdersComponent
+    DashboardOrdersComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,

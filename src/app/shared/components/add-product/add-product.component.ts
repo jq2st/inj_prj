@@ -3,6 +3,7 @@ import { Item } from 'src/app/catalog-page/catalog/catalog.component';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CatalogService } from 'src/app/services/catalog.service';
 import { ActivatedRoute } from '@angular/router';
+import { Category } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-add-product',
@@ -10,8 +11,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  editingProduct: Item
+
   addForm: FormGroup
+  categoties: Category[]
+  isLoaded: boolean = false
 
   @Output() onAdd: EventEmitter<Item> = new EventEmitter<Item>()
   @Output() onClose: EventEmitter<null> = new EventEmitter<null>()
@@ -26,6 +29,12 @@ export class AddProductComponent implements OnInit {
       description: new FormControl('', Validators.required),
       cost: new FormControl('', Validators.required)
     })
+    this.catalogService.getCategories()
+      .subscribe(cat => {
+        this.categoties = cat
+        this.addForm.patchValue({category: cat[0].id})
+        this.isLoaded = true
+      })
   }
 
   closePopup() {

@@ -5,7 +5,9 @@
             <form [formGroup]="editForm" (submit)="saveEdited(editingProduct.id)">
                 <input type="text" formControlName="name">
                 <input type="text" formControlName="articul">
-                <input type="text" formControlName="category">
+                <select formControlName="category">
+                    <option *ngFor="let c of categoties" [value]="c.id">{{c.name}}</option>
+                </select>
                 <input type="text" formControlName="description">
                 <input type="text" formControlName="cost">
                 <div class="button-block">

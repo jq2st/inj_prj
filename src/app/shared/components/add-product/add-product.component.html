@@ -1,11 +1,13 @@
 <div class="window-bg">
-    <div class="window">
+    <div class="window" *ngIf="isLoaded">
         <div class="add-inside">
             <h2>Параметры товара</h2>
             <form [formGroup]="addForm" (submit)="saveAdded()">
                 <input type="text" placeholder="Название товара" formControlName="name">
                 <input type="text" placeholder="Артикул" formControlName="articul">
-                <input type="text" placeholder="Категория" formControlName="category">
+                <select formControlName="category">
+                    <option *ngFor="let c of categoties" [value]="c.id">{{c.name}}</option>
+                </select>
                 <input type="text" placeholder="Описание" formControlName="description">
                 <input type="text" placeholder="Стоимость" formControlName="cost">
                 <div class="button-block">

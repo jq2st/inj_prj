@@ -4,6 +4,8 @@ import { Item } from 'src/app/catalog-page/catalog/catalog.component';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { switchMap, map } from 'rxjs/operators';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard-products',
@@ -20,8 +22,13 @@ export class DashboardProductsComponent implements OnInit {
   constructor(private catalogService: CatalogService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.catalogService.getItems()
-      .subscribe(items => {
+    forkJoin(this.catalogService.getItems(), this.catalogService.getCategories())
+      .subscribe(res => {
+        let items = res[0].map(its => {
+          console.log(res[1], its)
+          its.category = res[1].find(cat => cat.id == +its.category).name
+          return its
+        })
         this.productsList = items
       })
     this.route.queryParams
@@ -49,21 +56,23 @@ export class DashboardProductsComponent implements OnInit {
 
   changeProduct(event) {
     console.log(event)
-    this.catalogService.putItem(event.id, event)
-      .subscribe(n => {
+    forkJoin(this.catalogService.putItem(event.id, event), this.catalogService.getCategories())
+      .subscribe(res => {
+        let n = res[0]
         let changed = this.productsList.find(i => i.id == n.id)
         changed.articul = n.articul
         changed.name = n.name
-        changed.category = n.category
+        changed.category = res[1].find(cat => cat.id == +res[0].category).name
         changed.description = n.description
         changed.cost = n.cost
       })
   }
 
   addProduct(item) {
-    console.log('XXX', item)
-    this.catalogService.addItem(item)
-      .subscribe(n => this.productsList.push(n))
+    forkJoin(this.catalogService.addItem(item), this.catalogService.getCategories())
+      .subscribe(res => {
+        res[0].category = res[1].find(cat => cat.id == +res[0].category).name
+        this.productsList.push(res[0])
+      })
   }
-
 }

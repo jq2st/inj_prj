@@ -5,6 +5,7 @@ import { CatalogService } from 'src/app/services/catalog.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { pipe } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Category } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-edit-product',
@@ -16,6 +17,7 @@ export class EditProductComponent implements OnInit {
   editingProduct: Item
   editForm: FormGroup
   editId: number 
+  categoties: Category[]
 
   @Output() onEdit: EventEmitter<Item> = new EventEmitter<Item>()
   @Output() onClose: EventEmitter<null> = new EventEmitter<null>()
@@ -29,6 +31,11 @@ export class EditProductComponent implements OnInit {
       category: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
       cost: new FormControl('', Validators.required)
+    })
+    this.catalogService.getCategories()
+    .subscribe(cat => {
+      this.categoties = cat
+      this.editForm.patchValue({category: cat[0].id})
     })
     this.route.queryParams
       .pipe(

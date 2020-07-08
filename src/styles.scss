@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+a, button {
+    transition: .3s;;
+}
 .container {
     margin: 0 auto;
     max-width: 1200px;

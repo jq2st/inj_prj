@@ -8,7 +8,7 @@ export interface Item {
   picUrl?: string,
   name: string,
   articul: string,
-  category: number,
+  category: string,
   description: string,
   cost: number    
 } 

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Item } from '../catalog-page/catalog/catalog.component';
+import { Category } from '../shared/interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +25,20 @@ export class CatalogService {
     return this.http.get<Item[]>(this.link + '/items?category=' + category)
   }
 
-  getCategories() {
-    return this.http.get(this.link + '/categories')
+  getCategory(id: number): Observable<Category> {
+    return this.http.get<Category>(this.link + '/categories/' + id)
+  }
+
+  getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(this.link + '/categories')
+  }
+
+  deleteCategory(id: number): Observable<void> {
+    return this.http.delete<void>(this.link + '/categories/' + id)
+  }
+
+  addCategory(category: Category): Observable<Category> {
+    return this.http.post<Category>(this.link + '/categories/', category)
   }
 
   deleteItem(id: number): Observable<void> {
