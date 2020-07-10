@@ -1,1 +1,14 @@
-<p>dashboard-orders works!</p>
+<div class="dashboard-orders-container">
+    <h1>Заказы</h1>
+    <div class="orders-list">
+        <div class="orders-list__item" *ngFor="let order of ordersList">
+            <div class="list-item">
+                <div class="list-item__item">{{'Имя: ' + order.username}}</div>
+                <div class="list-item__item">{{'Телефон: ' + order.phone}}</div>
+                <div class="list-item__item">{{'Адрес: ' + order.adress}}</div>
+                <div class="list-item__item">{{'Набор 1, Количество: 8, Стоимость: 800р'}}</div>
+                <div class="list-item__item">{{'Бисер китай 81, Количество: 1, Стоимость: 120р'}}</div>
+            </div>
+        </div>
+    </div>
+</div>

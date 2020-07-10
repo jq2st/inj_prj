@@ -11,6 +11,7 @@
                     <input type="password" formControlName="password">
                 </div>
                 <button type="submit" class="submit">Войти</button>
+                <small *ngIf="fail" style="color: red; margin-left: 30px;">Неверные данные для входа</small>
             </form>
         </div>
     </div>

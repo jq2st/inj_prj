@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { CatalogService } from '../services/catalog.service';
+import { OrdersService } from '../services/orders.service';
+import { Order } from '../shared/interfaces/interfaces';
+import { Router } from '@angular/router';
 
 export interface inCartItem {
   id?: any,
@@ -24,9 +27,9 @@ export class CartPageComponent implements OnInit {
   itemIds = []
   items: inCartItem[] = [] 
   totalPrice: number = 0
+  order: Order = {username: ''}
 
-
-  constructor(private cartService: CartService, private catalogService: CatalogService) { }
+  constructor(private cartService: CartService, private catalogService: CatalogService, private orderService: OrdersService, private router: Router) { }
 
   ngOnInit() {
     if (this.cartService.cartMainNum > 0) {
@@ -83,8 +86,17 @@ export class CartPageComponent implements OnInit {
   }
 
   submitPur() {
-    console.log(this.form.value)
+    let adress = ''
+    let form = this.form.value
+    this.order.username = form.userData.name
+    this.order.phone = form.userData.phone
+    adress = form.adress.city + ', ' + form.adress.street + ', ' + form.adress.house + ', ' + form.adress.appartments
+    this.order.adress = adress
+    this.order.items = localStorage.getItem('cartItemIds')
+    this.orderService.addOrder(this.order)
+      .subscribe()
     this.cartService.mainNumZeroing()
+    this.router.navigate(['/'])
   }
 
 }

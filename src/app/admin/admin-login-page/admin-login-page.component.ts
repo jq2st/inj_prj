@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AdminLoginPageComponent implements OnInit {
 
+  fail: boolean = false
   form: FormGroup
 
   constructor(private auth: AuthService, private router: Router) { }
@@ -24,11 +25,15 @@ export class AdminLoginPageComponent implements OnInit {
 
   checkAdmin() {
     const admin: Admin = {
-      login: this.form.value.login,
+      email: this.form.value.login,
       password: this.form.value.password
     }
-    this.form.reset()
-    this.router.navigate(['admin', 'dashboard'])
+    
+    this.auth.login(admin)
+      .subscribe(n => {
+        this.form.reset()
+        this.router.navigate(['admin', 'dashboard'])
+      })
   }
 
 }

@@ -7,7 +7,8 @@
     font-family: 'Open Sans', sans-serif;
 }
 a, button {
-    transition: .3s;;
+    transition: .3s;
+    cursor: pointer;
 }
 .container {
     margin: 0 auto;
@@ -17,6 +18,11 @@ a, button {
 .page-name {
     font-size: 30px;
     margin: 50px auto 20px;
+}
+button:disabled.submit {
+    cursor: default;
+    color:darkgray;
+    background-color: #f1f1f1;
 }
 app-catalog-categories {
     width: 300px;
