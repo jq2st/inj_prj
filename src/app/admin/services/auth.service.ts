@@ -14,11 +14,16 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   get token(): string {
-    return ''
+    const expDate = new Date(localStorage.getItem('f-token-date'))
+    if (new Date > expDate) {
+      this.logout()
+      return null
+    }
+    return localStorage.getItem('f-token')
   }
 
   logout() {
-
+    
   }
 
   login(user: Admin): Observable<any> {
@@ -33,8 +38,14 @@ export class AuthService {
     return !!this.token
   }
 
-  private setToken(resp: FAuth) {
-    console.log(resp)
+  private setToken(resp: FAuth | null) {
+    if (resp) {
+      const expDate = new Date(new Date().getTime() + +resp.expiresIn * 1000)
+      localStorage.setItem('f-token', resp.idToken)
+      localStorage.setItem('f-token-date', expDate.toString())
+    } else {
+      localStorage.clear()
+    }
   }
 
 }

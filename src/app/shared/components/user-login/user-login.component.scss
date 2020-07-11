@@ -1,0 +1,23 @@
+.popup-bg {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.4);
+}
+.popup-window {
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+}
+.popup-window__inside {
+    padding: 50px 20px;
+    h2 {
+        height: 25px;
+        margin-bottom: 20px;
+    }
+}

@@ -18,6 +18,9 @@ header {
 .header-info__item {
     margin: 0 20px;
 }
+.sub-header-container__right {
+    display: flex;
+}
 .sub-header-container {
     display: flex;
     justify-content: space-between;
@@ -64,6 +67,28 @@ header {
     width: 20px;
     background-image: url("src/assets/imgs/sc.svg");
     background-size: cover;
+    margin-right: 10px;
+}
+.cabinet {
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+.cabinet:hover {
+    color: #6093BF;
+}
+.cabinet:hover .cabinet__pic {
+    background-image: url("src/assets/imgs/user_a.svg");
+    color: #6093BF;
+}
+.cabinet__pic {
+    height: 20px;
+    width: 20px;
+    background-image: url("src/assets/imgs/user.svg");
+    background-size: cover;
+    margin-right: 10px;
+}
+.cabinet__sign {
     margin-right: 10px;
 }
 .header-info__item_phone {

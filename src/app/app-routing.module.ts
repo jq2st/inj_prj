@@ -12,6 +12,9 @@ import { AdminDashboardPadeComponent } from './admin/admin-dashboard-pade/admin-
 import { DashboardProductsComponent } from './admin/admin-dashboard-pade/dashboard-products/dashboard-products.component';
 import { DashboardCategoriesComponent } from './admin/admin-dashboard-pade/dashboard-categories/dashboard-categories.component';
 import { DashboardOrdersComponent } from './admin/admin-dashboard-pade/dashboard-orders/dashboard-orders.component';
+import { AuthGuard } from './admin/services/auth.guard';
+import { CabinetPageComponent } from './cabinet-page/cabinet-page.component';
+import { UserAuthGuard } from './services/user-auth.guard';
 
 
 const routes: Routes = [
@@ -20,13 +23,14 @@ const routes: Routes = [
       // {path: '', redirectTo: '/', pathMatch: 'full'},
       {path: '', component: CatalogPageComponent},
       {path: 'item/:id', component: ItemPageComponent},
-      {path: 'cart', component: CartPageComponent}
+      {path: 'cart', component: CartPageComponent},
+      {path: 'cabinet', component: CabinetPageComponent, canActivate: [UserAuthGuard]}
     ]
   },
   {path: 'admin', component: AdminLayoutComponent, children: [
     {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
     {path: 'login', component: AdminLoginPageComponent},
-    {path: 'dashboard', component: AdminDashboardPadeComponent, children: [
+    {path: 'dashboard', component: AdminDashboardPadeComponent, canActivate: [AuthGuard], children: [
       {path: 'categories', component: DashboardCategoriesComponent},
       {path: 'products', component: DashboardProductsComponent},
       {path: 'orders', component: DashboardOrdersComponent}

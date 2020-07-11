@@ -14,5 +14,6 @@ export interface Order {
 }
 
 export interface FAuth {
-    idToken: string
+    idToken: string,
+    expiresIn: string
 }

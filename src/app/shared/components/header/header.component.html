@@ -36,12 +36,20 @@
                     <li><a routerLink="/contacts" routerLinkActive="sub-header-menu__list_active">Контакты</a></li>
                 </ul>
             </div>
-            <div class="sub-header-container__cart">
-                <a class="cart" routerLink="/cart">
-                    <div class="cart__pic"></div>
-                    <div class="cart__sign">Корзина</div>
-                </a>
-                <div class="cartMainNum" *ngIf="cartService.cartMainNum > 0">{{cartService.cartMainNum}}</div>
+            <div class="sub-header-container__right">
+                <div class="sub-header-container__cabinet">
+                    <a class="cabinet" routerLink="/cabinet">
+                        <div class="cabinet__pic"></div>
+                        <div class="cabinet__sign">Личный кабинет</div>
+                    </a>
+                </div>
+                <div class="sub-header-container__cart">
+                    <a class="cart" routerLink="/cart">
+                        <div class="cart__pic"></div>
+                        <div class="cart__sign">Корзина</div>
+                    </a>
+                    <div class="cartMainNum" *ngIf="cartService.cartMainNum > 0">{{cartService.cartMainNum}}</div>
+                </div>
             </div>
         </div>
     </div>
@@ -53,6 +61,7 @@
                     <li><a routerLink="/about" routerLinkActive="sub-header-menu__list_active">О нас</a></li>
                     <li><a routerLink="/pay" routerLinkActive="sub-header-menu__list_active">Оплата и доставка</a></li>
                     <li><a routerLink="/contacts" routerLinkActive="sub-header-menu__list_active">Контакты</a></li>
+                    <li><a routerLink="/cabinet" routerLinkActive="sub-header-menu__list_active">Личный кабинет</a></li>
                 </ul>
             </div>
             <div class="mobile-menu-close" (click)="isMobileMenuOpen = !isMobileMenuOpen"></div>

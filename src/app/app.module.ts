@@ -27,6 +27,8 @@ import { AddProductComponent } from './shared/components/add-product/add-product
 import { DashboardCategoriesComponent } from './admin/admin-dashboard-pade/dashboard-categories/dashboard-categories.component';
 import { DashboardOrdersComponent } from './admin/admin-dashboard-pade/dashboard-orders/dashboard-orders.component';
 import { AddCategoryComponent } from './shared/components/add-category/add-category.component';
+import { CabinetPageComponent } from './cabinet-page/cabinet-page.component';
+import { UserLoginComponent } from './shared/components/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { AddCategoryComponent } from './shared/components/add-category/add-categ
     AddProductComponent,
     DashboardCategoriesComponent,
     DashboardOrdersComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    CabinetPageComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
