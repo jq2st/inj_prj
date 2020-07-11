@@ -38,7 +38,7 @@ export class CartPageComponent implements OnInit {
         if (n != '') {
           let itemId = n.split('__')[0]
           let itemAmount = n.split('__')[1]
-          this.catalogService.getItem(Number.parseInt(itemId))
+          this.catalogService.getItem(itemId)
             .subscribe(item => {
               this.items.push({id: item.id, name: item.name, amount: itemAmount, price: item.cost, articul: item.articul})
               this.totalPrice += item.cost * Number.parseInt(itemAmount)

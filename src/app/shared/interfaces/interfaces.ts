@@ -1,12 +1,12 @@
 import { Item } from 'src/app/catalog-page/catalog/catalog.component';
 
 export interface Category {
-    id?: number,
+    id?: string,
     name: string
 }
 
 export interface Order {
-    id?: number,
+    id?: string,
     username?: string,
     phone?: string,
     adress?: string
@@ -16,4 +16,8 @@ export interface Order {
 export interface FAuth {
     idToken: string,
     expiresIn: string
+}
+
+export interface fResp {
+    name: string
 }

@@ -11,7 +11,7 @@ import { CartService } from '../services/cart.service';
 })
 export class ItemPageComponent implements OnInit {
 
-  itemId: number = 0
+  itemId: string = ''
   item: Item
   itemName: string = ''
   itemPrice: number = 0
@@ -33,7 +33,7 @@ export class ItemPageComponent implements OnInit {
 
   addToCart() {
     let amount = this.itemAmount
-    this.cartService.addItem(amount, this.item.id)
+    this.cartService.addItem(amount, this.itemId)
   }
 
   amountIncrease() {

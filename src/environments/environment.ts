@@ -6,7 +6,8 @@ import { Environment } from './interface';
 
 export const environment: Environment = {
   production: false,
-  apiKey: 'AIzaSyBpebq4GELc_W-GPTIRqwvZkpPuqtaQYY0'
+  apiKey: 'AIzaSyBpebq4GELc_W-GPTIRqwvZkpPuqtaQYY0',
+  fDbUrl: 'https://biser-shop.firebaseio.com/'
 };
 
 /*

@@ -29,7 +29,7 @@ export class CartService {
           arethere++
         }
       })
-      console.log(itemIdsArray)
+      console.log('fffff', itemId)
       itemIdsArray = itemIdsArray.filter(n => {
         return n[0] != itemId
       })

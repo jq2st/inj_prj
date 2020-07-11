@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogService } from 'src/app/services/catalog.service';
+import { Category } from 'src/app/shared/interfaces/interfaces';
 
 @Component({
   selector: 'app-dashboard-categories',
@@ -9,7 +10,7 @@ import { CatalogService } from 'src/app/services/catalog.service';
 export class DashboardCategoriesComponent implements OnInit {
 
   isAdding: boolean = false
-  categoriesList: any = []
+  categoriesList: Category[] = []
 
   constructor(private catalogService: CatalogService) { }
 
@@ -17,6 +18,7 @@ export class DashboardCategoriesComponent implements OnInit {
     this.catalogService.getCategories()
       .subscribe(categories => {
         this.categoriesList = categories
+        console.log(categories)
       })
   }
 

@@ -26,7 +26,7 @@ export class DashboardProductsComponent implements OnInit {
       .subscribe(res => {
         let items = res[0].map(its => {
           console.log(res[1], its)
-          its.category = res[1].find(cat => cat.id == +its.category).name
+          its.category = res[1].find(cat => cat.id == its.category).name
           return its
         })
         this.productsList = items
@@ -62,7 +62,7 @@ export class DashboardProductsComponent implements OnInit {
         let changed = this.productsList.find(i => i.id == n.id)
         changed.articul = n.articul
         changed.name = n.name
-        changed.category = res[1].find(cat => cat.id == +res[0].category).name
+        changed.category = res[1].find(cat => cat.id == res[0].category).name
         changed.description = n.description
         changed.cost = n.cost
       })
@@ -71,7 +71,7 @@ export class DashboardProductsComponent implements OnInit {
   addProduct(item) {
     forkJoin(this.catalogService.addItem(item), this.catalogService.getCategories())
       .subscribe(res => {
-        res[0].category = res[1].find(cat => cat.id == +res[0].category).name
+        res[0].category = res[1].find(cat => cat.id == res[0].category).name
         this.productsList.push(res[0])
       })
   }
