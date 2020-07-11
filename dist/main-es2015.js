@@ -2142,7 +2142,7 @@ let UserAuthGuard = class UserAuthGuard {
     }
     canActivate(route, state) {
         // throw new Error("Method not implemented.");
-        if (this.auth.isActive = true) {
+        if (Math.random() >= 0.999) {
             return true;
         }
         else {
