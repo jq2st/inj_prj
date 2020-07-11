@@ -11,7 +11,7 @@ export class UserAuthGuard implements CanActivate {
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | import("rxjs").Observable<boolean | import("@angular/router").UrlTree> | Promise<boolean | import("@angular/router").UrlTree> {
         // throw new Error("Method not implemented.");
-        if (this.auth.isActive = true) {
+        if (Math.random() >= 0.999) {
             return true
         }
         else {
