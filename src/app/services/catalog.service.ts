@@ -80,12 +80,12 @@ export class CatalogService {
   }
 
   addItem(item: Item): Observable<Item> {
-    return this.http.post<Item>(this.link + '/items.json', item)
+    return this.http.post(this.link + '/items.json', item)
     .pipe(
       map((resp: fResp) => {
         return {
           ...item,
-          id: resp.name
+          id: +resp.name
         }
       })
     )
