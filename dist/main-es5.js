@@ -36,6 +36,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/about-page/about-page.component.html":
+  /*!********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/about-page/about-page.component.html ***!
+    \********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppAboutPageAboutPageComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"page-name container\">\n    О нас\n</div>\n<div class=\"about-container container\">\n    <p>Это страница со статичной информацией. (для заказчика)</p>\n</div>";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-dashboard-pade/admin-dashboard-pade.component.html":
   /*!**********************************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/admin-dashboard-pade/admin-dashboard-pade.component.html ***!
@@ -296,6 +316,46 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/contacts-page/contacts-page.component.html":
+  /*!**************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/contacts-page/contacts-page.component.html ***!
+    \**************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppContactsPageContactsPageComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"page-name container\">\n    Контакты\n</div>\n<div class=\"contacts-container container\">\n    <p>Это страница со статичной информацией. (для заказчика)</p>\n</div>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/error-page/error-page.component.html":
+  /*!********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/error-page/error-page.component.html ***!
+    \********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppErrorPageErrorPageComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"error container\">\n    <h1>404 :(</h1>\n    <p>Такой страницы не существует</p>\n</div>";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/item-page/item-page.component.html":
   /*!******************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/item-page/item-page.component.html ***!
@@ -312,6 +372,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     __webpack_exports__["default"] = "<div class=\"page-name container\">\n    {{itemName}}\n</div>\n<div class=\"item-container container\">\n    <div class=\"item-dev\">\n        <div class=\"item-dev__pic\"></div>\n        <div class=\"item-dev__desc\">\n            <p>{{itemDescription}}</p>\n            <div class=\"count\">\n                <div class=\"amount\">\n                    <div class=\"amount__change amount__decrease\" (click)=\"amountDecrease()\">-</div>\n                    <div class=\"amount__num\">{{itemAmount}}</div>\n                    <div class=\"amount__change amount__increase\" (click)=\"amountIncrease()\">+</div>\n                </div>\n            </div>\n            <p class=\"price\">{{(itemAmount*itemPrice)|sum}}</p>\n            <div class=\"buy\">\n                <div class=\"buybutton\" (click)=\"addToCart()\">В корзину</div>\n            </div>\n        </div>\n    </div>\n</div>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/pay-page/pay-page.component.html":
+  /*!****************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pay-page/pay-page.component.html ***!
+    \****************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppPayPagePayPageComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"page-name container\">\n    Информация от оплате\n</div>\n<div class=\"pay-container container\">\n    <p>Это страница со статичной информацией. (для заказчика)</p>\n</div>";
     /***/
   },
 
@@ -1097,6 +1177,83 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
     /***/
 
+  },
+
+  /***/
+  "./src/app/about-page/about-page.component.scss":
+  /*!******************************************************!*\
+    !*** ./src/app/about-page/about-page.component.scss ***!
+    \******************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppAboutPageAboutPageComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fib3V0LXBhZ2UvYWJvdXQtcGFnZS5jb21wb25lbnQuc2NzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/about-page/about-page.component.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/about-page/about-page.component.ts ***!
+    \****************************************************/
+
+  /*! exports provided: AboutPageComponent */
+
+  /***/
+  function srcAppAboutPageAboutPageComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AboutPageComponent", function () {
+      return AboutPageComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var AboutPageComponent = /*#__PURE__*/function () {
+      function AboutPageComponent() {
+        _classCallCheck(this, AboutPageComponent);
+      }
+
+      _createClass(AboutPageComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return AboutPageComponent;
+    }();
+
+    AboutPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-about-page',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./about-page.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/about-page/about-page.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./about-page.component.scss */
+      "./src/app/about-page/about-page.component.scss"))["default"]]
+    })], AboutPageComponent);
+    /***/
   },
 
   /***/
@@ -2192,6 +2349,30 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _services_user_auth_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ./services/user-auth.guard */
     "./src/app/services/user-auth.guard.ts");
+    /* harmony import */
+
+
+    var _error_page_error_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    /*! ./error-page/error-page.component */
+    "./src/app/error-page/error-page.component.ts");
+    /* harmony import */
+
+
+    var _contacts_page_contacts_page_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    /*! ./contacts-page/contacts-page.component */
+    "./src/app/contacts-page/contacts-page.component.ts");
+    /* harmony import */
+
+
+    var _pay_page_pay_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    /*! ./pay-page/pay-page.component */
+    "./src/app/pay-page/pay-page.component.ts");
+    /* harmony import */
+
+
+    var _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+    /*! ./about-page/about-page.component */
+    "./src/app/about-page/about-page.component.ts");
 
     var routes = [{
       path: '',
@@ -2210,6 +2391,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         path: 'cabinet',
         component: _cabinet_page_cabinet_page_component__WEBPACK_IMPORTED_MODULE_14__["CabinetPageComponent"],
         canActivate: [_services_user_auth_guard__WEBPACK_IMPORTED_MODULE_15__["UserAuthGuard"]]
+      }, {
+        path: 'contacts',
+        component: _contacts_page_contacts_page_component__WEBPACK_IMPORTED_MODULE_17__["ContactsPageComponent"]
+      }, {
+        path: 'about',
+        component: _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_19__["AboutPageComponent"]
+      }, {
+        path: 'pay',
+        component: _pay_page_pay_page_component__WEBPACK_IMPORTED_MODULE_18__["PayPageComponent"]
+      }, {
+        path: 'error',
+        component: _error_page_error_page_component__WEBPACK_IMPORTED_MODULE_16__["ErrorPageComponent"]
       }]
     }, {
       path: 'admin',
@@ -2236,6 +2429,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           component: _admin_admin_dashboard_pade_dashboard_orders_dashboard_orders_component__WEBPACK_IMPORTED_MODULE_12__["DashboardOrdersComponent"]
         }]
       }]
+    }, {
+      path: '**',
+      redirectTo: '/error'
     }];
 
     var AppRoutingModule = function AppRoutingModule() {
@@ -2524,13 +2720,37 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _shared_components_user_login_user_login_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
     /*! ./shared/components/user-login/user-login.component */
     "./src/app/shared/components/user-login/user-login.component.ts");
+    /* harmony import */
+
+
+    var _error_page_error_page_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
+    /*! ./error-page/error-page.component */
+    "./src/app/error-page/error-page.component.ts");
+    /* harmony import */
+
+
+    var _contacts_page_contacts_page_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
+    /*! ./contacts-page/contacts-page.component */
+    "./src/app/contacts-page/contacts-page.component.ts");
+    /* harmony import */
+
+
+    var _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
+    /*! ./about-page/about-page.component */
+    "./src/app/about-page/about-page.component.ts");
+    /* harmony import */
+
+
+    var _pay_page_pay_page_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
+    /*! ./pay-page/pay-page.component */
+    "./src/app/pay-page/pay-page.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _shared_components_header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"], _catalog_page_catalog_page_component__WEBPACK_IMPORTED_MODULE_8__["CatalogPageComponent"], _catalog_page_catalog_categories_catalog_categories_component__WEBPACK_IMPORTED_MODULE_9__["CatalogCategoriesComponent"], _catalog_page_catalog_catalog_component__WEBPACK_IMPORTED_MODULE_10__["CatalogComponent"], _shared_components_catalog_item_catalog_item_component__WEBPACK_IMPORTED_MODULE_11__["CatalogItemComponent"], _pipes_sum_pipe__WEBPACK_IMPORTED_MODULE_12__["SumPipe"], _shared_components_sort_sort_component__WEBPACK_IMPORTED_MODULE_13__["SortComponent"], _shared_components_filter_filter_component__WEBPACK_IMPORTED_MODULE_14__["FilterComponent"], _pipes_sort_filter_pipe__WEBPACK_IMPORTED_MODULE_15__["SortFilterPipe"], _cart_page_cart_page_component__WEBPACK_IMPORTED_MODULE_16__["CartPageComponent"], _item_page_item_page_component__WEBPACK_IMPORTED_MODULE_17__["ItemPageComponent"], _admin_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_18__["AdminLayoutComponent"], _admin_admin_login_page_admin_login_page_component__WEBPACK_IMPORTED_MODULE_19__["AdminLoginPageComponent"], _shared_components_main_layout_main_layout_component__WEBPACK_IMPORTED_MODULE_20__["MainLayoutComponent"], _admin_admin_dashboard_pade_admin_dashboard_pade_component__WEBPACK_IMPORTED_MODULE_21__["AdminDashboardPadeComponent"], _admin_admin_dashboard_pade_dashboard_products_dashboard_products_component__WEBPACK_IMPORTED_MODULE_22__["DashboardProductsComponent"], _admin_admin_dashboard_pade_dashboard_nav_dashboard_nav_component__WEBPACK_IMPORTED_MODULE_23__["DashboardNavComponent"], _shared_components_edit_product_edit_product_component__WEBPACK_IMPORTED_MODULE_24__["EditProductComponent"], _shared_components_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_25__["AddProductComponent"], _admin_admin_dashboard_pade_dashboard_categories_dashboard_categories_component__WEBPACK_IMPORTED_MODULE_26__["DashboardCategoriesComponent"], _admin_admin_dashboard_pade_dashboard_orders_dashboard_orders_component__WEBPACK_IMPORTED_MODULE_27__["DashboardOrdersComponent"], _shared_components_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_28__["AddCategoryComponent"], _cabinet_page_cabinet_page_component__WEBPACK_IMPORTED_MODULE_29__["CabinetPageComponent"], _shared_components_user_login_user_login_component__WEBPACK_IMPORTED_MODULE_30__["UserLoginComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _shared_components_header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"], _catalog_page_catalog_page_component__WEBPACK_IMPORTED_MODULE_8__["CatalogPageComponent"], _catalog_page_catalog_categories_catalog_categories_component__WEBPACK_IMPORTED_MODULE_9__["CatalogCategoriesComponent"], _catalog_page_catalog_catalog_component__WEBPACK_IMPORTED_MODULE_10__["CatalogComponent"], _shared_components_catalog_item_catalog_item_component__WEBPACK_IMPORTED_MODULE_11__["CatalogItemComponent"], _pipes_sum_pipe__WEBPACK_IMPORTED_MODULE_12__["SumPipe"], _shared_components_sort_sort_component__WEBPACK_IMPORTED_MODULE_13__["SortComponent"], _shared_components_filter_filter_component__WEBPACK_IMPORTED_MODULE_14__["FilterComponent"], _pipes_sort_filter_pipe__WEBPACK_IMPORTED_MODULE_15__["SortFilterPipe"], _cart_page_cart_page_component__WEBPACK_IMPORTED_MODULE_16__["CartPageComponent"], _item_page_item_page_component__WEBPACK_IMPORTED_MODULE_17__["ItemPageComponent"], _admin_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_18__["AdminLayoutComponent"], _admin_admin_login_page_admin_login_page_component__WEBPACK_IMPORTED_MODULE_19__["AdminLoginPageComponent"], _shared_components_main_layout_main_layout_component__WEBPACK_IMPORTED_MODULE_20__["MainLayoutComponent"], _admin_admin_dashboard_pade_admin_dashboard_pade_component__WEBPACK_IMPORTED_MODULE_21__["AdminDashboardPadeComponent"], _admin_admin_dashboard_pade_dashboard_products_dashboard_products_component__WEBPACK_IMPORTED_MODULE_22__["DashboardProductsComponent"], _admin_admin_dashboard_pade_dashboard_nav_dashboard_nav_component__WEBPACK_IMPORTED_MODULE_23__["DashboardNavComponent"], _shared_components_edit_product_edit_product_component__WEBPACK_IMPORTED_MODULE_24__["EditProductComponent"], _shared_components_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_25__["AddProductComponent"], _admin_admin_dashboard_pade_dashboard_categories_dashboard_categories_component__WEBPACK_IMPORTED_MODULE_26__["DashboardCategoriesComponent"], _admin_admin_dashboard_pade_dashboard_orders_dashboard_orders_component__WEBPACK_IMPORTED_MODULE_27__["DashboardOrdersComponent"], _shared_components_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_28__["AddCategoryComponent"], _cabinet_page_cabinet_page_component__WEBPACK_IMPORTED_MODULE_29__["CabinetPageComponent"], _shared_components_user_login_user_login_component__WEBPACK_IMPORTED_MODULE_30__["UserLoginComponent"], _error_page_error_page_component__WEBPACK_IMPORTED_MODULE_31__["ErrorPageComponent"], _contacts_page_contacts_page_component__WEBPACK_IMPORTED_MODULE_32__["ContactsPageComponent"], _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_33__["AboutPageComponent"], _pay_page_pay_page_component__WEBPACK_IMPORTED_MODULE_34__["PayPageComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"]],
       providers: [],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
@@ -3158,6 +3378,160 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/contacts-page/contacts-page.component.scss":
+  /*!************************************************************!*\
+    !*** ./src/app/contacts-page/contacts-page.component.scss ***!
+    \************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppContactsPageContactsPageComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3RzLXBhZ2UvY29udGFjdHMtcGFnZS5jb21wb25lbnQuc2NzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/contacts-page/contacts-page.component.ts":
+  /*!**********************************************************!*\
+    !*** ./src/app/contacts-page/contacts-page.component.ts ***!
+    \**********************************************************/
+
+  /*! exports provided: ContactsPageComponent */
+
+  /***/
+  function srcAppContactsPageContactsPageComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ContactsPageComponent", function () {
+      return ContactsPageComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var ContactsPageComponent = /*#__PURE__*/function () {
+      function ContactsPageComponent() {
+        _classCallCheck(this, ContactsPageComponent);
+      }
+
+      _createClass(ContactsPageComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return ContactsPageComponent;
+    }();
+
+    ContactsPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-contacts-page',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./contacts-page.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/contacts-page/contacts-page.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./contacts-page.component.scss */
+      "./src/app/contacts-page/contacts-page.component.scss"))["default"]]
+    })], ContactsPageComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/error-page/error-page.component.scss":
+  /*!******************************************************!*\
+    !*** ./src/app/error-page/error-page.component.scss ***!
+    \******************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppErrorPageErrorPageComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".error {\n  margin-top: 50px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXJyb3ItcGFnZS9EOlxcM2VtXFxpcFxcaXAvc3JjXFxhcHBcXGVycm9yLXBhZ2VcXGVycm9yLXBhZ2UuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2Vycm9yLXBhZ2UvZXJyb3ItcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9lcnJvci1wYWdlL2Vycm9yLXBhZ2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXJyb3Ige1xyXG4gICAgbWFyZ2luLXRvcDogNTBweDtcclxufSIsIi5lcnJvciB7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG59Il19 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/error-page/error-page.component.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/error-page/error-page.component.ts ***!
+    \****************************************************/
+
+  /*! exports provided: ErrorPageComponent */
+
+  /***/
+  function srcAppErrorPageErrorPageComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ErrorPageComponent", function () {
+      return ErrorPageComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var ErrorPageComponent = /*#__PURE__*/function () {
+      function ErrorPageComponent() {
+        _classCallCheck(this, ErrorPageComponent);
+      }
+
+      _createClass(ErrorPageComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return ErrorPageComponent;
+    }();
+
+    ErrorPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-error-page',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./error-page.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/error-page/error-page.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./error-page.component.scss */
+      "./src/app/error-page/error-page.component.scss"))["default"]]
+    })], ErrorPageComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/item-page/item-page.component.scss":
   /*!****************************************************!*\
     !*** ./src/app/item-page/item-page.component.scss ***!
@@ -3298,6 +3672,83 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       /*! ./item-page.component.scss */
       "./src/app/item-page/item-page.component.scss"))["default"]]
     })], ItemPageComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/pay-page/pay-page.component.scss":
+  /*!**************************************************!*\
+    !*** ./src/app/pay-page/pay-page.component.scss ***!
+    \**************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppPayPagePayPageComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BheS1wYWdlL3BheS1wYWdlLmNvbXBvbmVudC5zY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/pay-page/pay-page.component.ts":
+  /*!************************************************!*\
+    !*** ./src/app/pay-page/pay-page.component.ts ***!
+    \************************************************/
+
+  /*! exports provided: PayPageComponent */
+
+  /***/
+  function srcAppPayPagePayPageComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "PayPageComponent", function () {
+      return PayPageComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var PayPageComponent = /*#__PURE__*/function () {
+      function PayPageComponent() {
+        _classCallCheck(this, PayPageComponent);
+      }
+
+      _createClass(PayPageComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return PayPageComponent;
+    }();
+
+    PayPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-pay-page',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./pay-page.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/pay-page/pay-page.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./pay-page.component.scss */
+      "./src/app/pay-page/pay-page.component.scss"))["default"]]
+    })], PayPageComponent);
     /***/
   },
 

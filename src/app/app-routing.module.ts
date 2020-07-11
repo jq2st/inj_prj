@@ -15,6 +15,10 @@ import { DashboardOrdersComponent } from './admin/admin-dashboard-pade/dashboard
 import { AuthGuard } from './admin/services/auth.guard';
 import { CabinetPageComponent } from './cabinet-page/cabinet-page.component';
 import { UserAuthGuard } from './services/user-auth.guard';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { ContactsPageComponent } from './contacts-page/contacts-page.component';
+import { PayPageComponent } from './pay-page/pay-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 
 const routes: Routes = [
@@ -24,10 +28,15 @@ const routes: Routes = [
       {path: '', component: CatalogPageComponent},
       {path: 'item/:id', component: ItemPageComponent},
       {path: 'cart', component: CartPageComponent},
-      {path: 'cabinet', component: CabinetPageComponent, canActivate: [UserAuthGuard]}
+      {path: 'cabinet', component: CabinetPageComponent, canActivate: [UserAuthGuard]},
+      {path: 'contacts', component: ContactsPageComponent},
+      {path: 'about', component: AboutPageComponent},
+      {path: 'pay', component: PayPageComponent},
+      {path: 'error', component: ErrorPageComponent},
     ]
   },
-  {path: 'admin', component: AdminLayoutComponent, children: [
+  {
+    path: 'admin', component: AdminLayoutComponent, children: [
     {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
     {path: 'login', component: AdminLoginPageComponent},
     {path: 'dashboard', component: AdminDashboardPadeComponent, canActivate: [AuthGuard], children: [
@@ -35,7 +44,8 @@ const routes: Routes = [
       {path: 'products', component: DashboardProductsComponent},
       {path: 'orders', component: DashboardOrdersComponent}
     ]}
-  ]}
+  ]},
+  {path: '**', redirectTo: '/error'}
 ];
 
 @NgModule({
